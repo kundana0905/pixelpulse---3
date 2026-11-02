@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f4ef">
+    <meta name="description" content="Find photographs and illustrations from Wikimedia Commons.">
+    <title>Image Atlas — Explore the world in pictures</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="Image Atlas home">
+        <span class="brand-mark" aria-hidden="true">IA</span>
+        <span>Image Atlas</span>
+      </a>
+      <span class="header-note">A little inspiration, one search at a time</span>
+    </header>
+
+    <main class="page">
+      <section class="intro" aria-labelledby="page-title">
+        <p class="eyebrow">THE OPEN IMAGE COLLECTION</p>
+        <h1 id="page-title">Explore the world<br>in <span>pictures.</span></h1>
+        <p class="intro-copy">Find a place, creature, or curious thing. Your next idea is waiting.</p>
+
+        <form class="search-form" id="search-form" role="search">
+          <label class="sr-only" for="search-input">Search for images</label>
+          <span class="search-icon" aria-hidden="true">⌕</span>
+          <input
+            id="search-input"
+            name="query"
+            type="search"
+            placeholder="Try “ocean”, “architecture”, or “birds”"
+            autocomplete="off"
+            maxlength="100"
+            required
+          >
+          <button type="submit">Search <span aria-hidden="true">→</span></button>
+        </form>
+
+        <p class="search-tip">A free collection powered by Wikimedia Commons</p>
+      </section>
+
+      <section class="results-section" aria-label="Image search results">
+        <div class="results-heading">
+          <h2 id="results-title">Start exploring</h2>
+          <span id="results-count" class="results-count"></span>
+        </div>
+        <p id="status" class="status" role="status" aria-live="polite">
+          Search for something you love to see it here.
+        </p>
+        <div id="results" class="results-grid" aria-busy="false"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Made for curious minds.</span>
+      <a href="https://commons.wikimedia.org/" target="_blank" rel="noopener noreferrer">Explore Wikimedia Commons ↗</a>
+    </footer>
+  </body>
+</html>
